@@ -1,5 +1,5 @@
 body{
-    @apply bg-gray1;
+    @apply bg-gray1 relative;
 }
 
 .bg-line.hovered {

@@ -12,6 +12,7 @@
     --text-h3: 40;
     --text-h4: 18;
     --text-h5: 96;
+    --text-h6: 10;
     --text-base : 16;
   
     /* font sizes at --min-vw */
@@ -80,6 +81,11 @@
         --min-fs: var(--text-h5-min);
         line-height: 1.25;
       }
+
+    .heading6{
+      @apply fluid-fs;
+      font-size: var(--text-h6);
+    }
 
       .font-primary {
         @apply fluid-fs;
