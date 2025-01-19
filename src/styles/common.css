@@ -1,0 +1,56 @@
+body{
+    @apply bg-gray1;
+}
+
+.bg-line.hovered {
+    margin-top: 0 !important; /* Ensure the hover effect works as intended */
+}
+
+@keyframes line-move {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes line-move-reverse {
+    0% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+
+    100%{
+        transform: translateX(100%);
+        opacity: 100%;
+    }
+}
+
+.line{
+ @apply relative flex;
+}
+
+.line p{
+    @apply relative overflow-hidden;
+}
+
+.line p::after{
+    content: "";
+    @apply absolute bottom-0 left-0 h-[1px] bg-red w-full transition duration-100 ease-in hover:ease-out;
+    /* transform: translateX(-100%); */
+    opacity: 0%;
+}
+
+.line:hover p::after{
+    /* transform: translateX(0); */
+    animation: line-move 500ms ease-in-out;
+    opacity: 100%;
+}
+
+.line:not(:hover) p::after {
+    animation: line-move-reverse 500ms ease-in-out;
+}
+
+

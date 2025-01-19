@@ -1,0 +1,82 @@
+:root {
+    --min-vw: 640;
+    --max-vw: 1920;
+  
+    /* convert to px */
+    --min-vw-px: calc(var(--min-vw) * 1px);
+    --max-vw-px: calc(var(--max-vw) * 1px);
+  
+    /* font sizes at --max-vw */
+    --text-h1: 64;
+    --text-h2: 48;
+    --text-h3: 40;
+    --text-h4: 18;
+    --text-base : 16;
+  
+    /* font sizes at --min-vw */
+    --text-h1-min: calc(var(--text-h1) * 0.425);
+    --text-h2-min: calc(var(--text-h2) * 0.5);
+    --text-h3-min: calc(var(--text-h3) * 0.6);
+    --text-h4-min: 12;
+    --text-base-min : 14;
+  }
+  body {
+    @apply font-primary;
+  }
+  
+  @layer components {
+    
+    .fluid-fs {
+      --max-fs: var(--text-base);
+      --min-fs: var(--text-base-min);
+  
+      --slope: calc((var(--max-fs) - var(--min-fs)) / (var(--max-vw) - var(--min-vw)));
+  
+      --min-fs-px: calc(var(--min-fs) * 1px);
+      --max-fs-px: calc(var(--max-fs) * 1px);
+      --fs-px: calc(var(--slope) * (100vw - var(--min-vw-px)) + var(--min-fs-px));
+  
+      font-size: clamp(var(--min-fs-px), var(--fs-px), var(--max-fs-px));
+    }
+  
+    .heading1 {
+      @apply fluid-fs;
+  
+      --max-fs: var(--text-h1);
+      --min-fs: var(--text-h1-min);
+      line-height: 1.5;
+    }
+  
+    .heading2 {
+      @apply fluid-fs;
+  
+      --max-fs: var(--text-h2);
+      --min-fs: var(--text-h2-min);
+      line-height: 1.5;
+    }
+  
+    .heading3 {
+      @apply fluid-fs;
+  
+      --max-fs: var(--text-h3);
+      --min-fs: var(--text-h3-min);
+      line-height: 1.25;
+    }
+
+    .heading4 {
+        @apply fluid-fs;
+    
+        --max-fs: var(--text-h4);
+        --min-fs: var(--text-h4-min);
+        line-height: 1.25;
+      }
+
+      .font-primary {
+        @apply fluid-fs;
+    
+        --max-fs: var(--text-base);
+        --min-fs: var(--text-base-min);
+        line-height: 1.25;
+      }
+  
+  }
