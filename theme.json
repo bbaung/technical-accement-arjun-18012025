@@ -30,6 +30,16 @@
             "name": "Red",
             "slug": "red",
             "color": "#e33529"
+          },
+          {
+            "name": "LightBlue",
+            "slug": "light-blue",
+            "color": "#afd8fb"
+          },
+          {
+            "name": "Blue",
+            "slug": "blue",
+            "color": "#2b6786"
           }
 
         ]

@@ -7,15 +7,15 @@
     --max-vw-px: calc(var(--max-vw) * 1px);
   
     /* font sizes at --max-vw */
-    --text-h1: 64;
-    --text-h2: 48;
+    --text-h1: 236;
+    --text-h2: 70;
     --text-h3: 40;
     --text-h4: 18;
     --text-base : 16;
   
     /* font sizes at --min-vw */
-    --text-h1-min: calc(var(--text-h1) * 0.425);
-    --text-h2-min: calc(var(--text-h2) * 0.5);
+    --text-h1-min: calc(var(--text-h1) * 0.2);
+    --text-h2-min: calc(var(--text-h2) * 0.357);
     --text-h3-min: calc(var(--text-h3) * 0.6);
     --text-h4-min: 12;
     --text-base-min : 14;

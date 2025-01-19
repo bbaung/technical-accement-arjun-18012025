@@ -53,4 +53,30 @@ body{
     animation: line-move-reverse 500ms ease-in-out;
 }
 
+.btn-book{
+    @apply absolute overflow-hidden block w-max m-auto;
+}
+
+.btn-book::before{
+    content: "";
+    @apply w-[10px] h-[10px] absolute rounded-full my-7 left-2 inset-y-0 bg-white;
+    @apply transition duration-300 ease-in hover:ease-out;
+    transform: translateX(-200%);
+}
+
+.btn-book:hover::before{
+    transform: translateX(0);
+}
+
+.btn-book::after{
+    content: "";
+    @apply w-[10px] h-[10px] absolute rounded-full my-7 right-2 inset-y-0 bg-white;
+    @apply transition duration-300 ease-in hover:ease-out;
+    transform: translateX(0);
+}
+
+.btn-book:hover::after{
+    transform: translateX(200%);
+}
+
 
