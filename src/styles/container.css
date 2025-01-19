@@ -1,5 +1,5 @@
 :root {
-    --container: 1760px;
+    --container: 1800px;
     --container-md: 1560px;
     --container-sm: 1360px;
     --container-md-px: 5.68%;
@@ -7,7 +7,7 @@
   }
   
   .container {
-    max-width: 1760px;
+    max-width: 1840px;
     width: 100%;
     padding: 0 20px;
   }

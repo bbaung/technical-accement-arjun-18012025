@@ -54,7 +54,7 @@ body{
 }
 
 .btn-book{
-    @apply absolute overflow-hidden block w-max m-auto;
+    @apply relative overflow-hidden block min-w-[300px] m-auto;
 }
 
 .btn-book::before{
@@ -77,6 +77,34 @@ body{
 
 .btn-book:hover::after{
     transform: translateX(200%);
+}
+
+.btn-try{
+    @apply relative flex items-center justify-center overflow-hidden;
+}
+
+.btn-try::before{
+    content: "";
+    @apply w-[10px] h-[10px] rounded-full bg-white;
+    @apply transition duration-300 ease-in hover:ease-out;
+    transform: translateX(-60px);
+    @apply absolute left-0;
+}
+
+.btn-try:hover::before{
+    transform: translateX(60px);
+}
+
+.btn-try::after{
+    content: "";
+    @apply w-[10px] h-[10px] rounded-full bg-white;
+    @apply transition duration-300 ease-in hover:ease-out;
+    transform: translateX(-60px);
+    @apply absolute right-0;
+}
+
+.btn-try:hover::after{
+    transform: translateX(60px);
 }
 
 

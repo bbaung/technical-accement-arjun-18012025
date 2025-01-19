@@ -40,6 +40,11 @@
             "name": "Blue",
             "slug": "blue",
             "color": "#2b6786"
+          },
+          {
+            "name": "DarkBlue",
+            "slug": "dark-blue",
+            "color": "#124e6d"
           }
 
         ]
